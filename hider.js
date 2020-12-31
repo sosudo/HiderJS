@@ -1,7 +1,6 @@
 function hider(){
     let webTitle = prompt("Title");
-    let webIcon = prompt("Icon");
-    let content = prompt("Content");
+    let webIcon = prompt("Icon URL");
     document.title = webTitle;
     let link = document.querySelector("link[rel~='icon']");
     if (!link){
@@ -10,5 +9,4 @@ function hider(){
         document.getElementsByTagName('head')[0].appendChild(link);
     }
     link.href = webIcon;
-    window.alert(content);
 }
